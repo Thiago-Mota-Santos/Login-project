@@ -1,11 +1,14 @@
-import Input from './components/Input/index'
-import GlobalStyles from './GlobalStyles'
+import GlobalStyles from './GlobalStyles';
+import Routes from './routes/';
+import { AuthProvider } from './contexts/index';
 
 function App() {
   return (
     <>
+    <AuthProvider>
+    <Routes/>
     <GlobalStyles/>
-    {/* <Input placeholder='digite your email' type={'text'} value={0} /> */}
+    </AuthProvider>
     </>
   )
      

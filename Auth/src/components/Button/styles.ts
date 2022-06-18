@@ -13,4 +13,11 @@ export const Button = styled.button`
  font-size: 16px;
  max-width: 350px;
 
+&:hover {
+    background: #5533ff;
+    opacity: 0.7;
+    transition : background .3s ease-in-out;
+}
+
+
 `;

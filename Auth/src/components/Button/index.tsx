@@ -5,13 +5,13 @@ import { Button } from './styles';
 interface Props{
     Text: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
-    Type: string;
+    Type?: "button" | "submit" | "reset";
 }
 
-const ButtonBox : React.FC<Props> = ({ Text, Type="button", onClick }) => {
+const ButtonBox : React.FC<Props> = ({ Text, onClick, Type="button" }) => {
     return (
       <Button
-        type="button"
+        type={Type}
         onClick={onClick}>
         {Text}
      </Button>

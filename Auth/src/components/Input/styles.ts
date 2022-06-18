@@ -7,6 +7,7 @@ export const InputContainer = styled.input`
     width: 100%;
     border-radius : 6px;
     font-size: 16px;
-    color: #f0f2f5;
+    color:black;
     border:none;
+    font:bold;
 `;
