@@ -11,9 +11,9 @@ interface Props{
 }
 
 const Private: React.FC<Props> = ({ Item }) =>{
-    const signed = useAuth();
-
-    return signed > 0 ? <Item/> : <Signin/>
+   const signed = useAuth();
+  
+    return signed > false ? <Item/> : <Signin/>
 };
 
 const routes: React.FC = () => {

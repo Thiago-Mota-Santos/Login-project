@@ -6,21 +6,21 @@ import useAuth from "../../hooks/useAuth"
 import { Container, WrapperContent, Title, LabelError, LabelSignup, Strong  } from './styles';
 
 type signed = {
-  signin: [];
+  signin?: any;
 }
 
-const Signin: React.FC = () => {
+ const Signin: React.FC = () => {
 
  const { signin }: signed = useAuth();
  const navigate = useNavigate();
 
- const [email, setEmail] = useState<string>(" ");
- const [password, setPassword] = useState<string>(" ");
- const [error, setError] = useState<string>(" ");
+ const [email, setEmail] = useState<string>("");
+ const [password, setPassword] = useState<string>("");
+ const [error, setError] = useState<string>("");
 
 
 
- const handleLogin: React.MouseEventHandler<HTMLButtonElement> | undefined () => {
+ const handleLogin: React.MouseEventHandler<HTMLButtonElement> | undefined = () => {
   if(!email || !password){
     setError("fill all fields")
     return;
@@ -57,7 +57,7 @@ const Signin: React.FC = () => {
       <LabelSignup>
         Don't have a account?
         <Strong>
-          <Link to ="/signup">&nbsp; Register</Link>
+          <Link to ="/signout">&nbsp;Register</Link>
         </Strong>
       </LabelSignup>
     </WrapperContent>
