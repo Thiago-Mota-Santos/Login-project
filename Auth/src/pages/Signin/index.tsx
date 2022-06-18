@@ -5,10 +5,13 @@ import { Link, useNavigate } from "react-router-dom"
 import useAuth from "../../hooks/useAuth"
 import { Container, WrapperContent, Title, LabelError, LabelSignup, Strong  } from './styles';
 
+type signed = {
+  signin: [];
+}
 
 const Signin: React.FC = () => {
 
-const { signin } = useAuth();
+ const { signin }: signed = useAuth();
  const navigate = useNavigate();
 
  const [email, setEmail] = useState<string>(" ");
