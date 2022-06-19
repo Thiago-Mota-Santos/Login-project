@@ -15,10 +15,7 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Title>Home</Title>
-      {/* <button type="button" onClick={() => [signout(), navigate("/")]}> */}
       <Button Text="Exit" onClick={() => [signout(), navigate("/")]} />
-  
-      {/* </button> */}
     </Container>
   )
 }

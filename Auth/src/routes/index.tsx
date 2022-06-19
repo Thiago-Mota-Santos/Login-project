@@ -8,10 +8,16 @@ import useAuth from '../hooks/useAuth'
 
 interface Props{
     Item?: any
+    
+}
+
+type signed = {
+  signed?: any;
 }
 
 const Private: React.FC<Props> = ({ Item }) =>{
-   const signed = useAuth();
+    const { signed }:signed = useAuth();
+    
   
     return signed > false ? <Item/> : <Signin/>
 };

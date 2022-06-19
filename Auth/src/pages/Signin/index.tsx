@@ -11,7 +11,7 @@ type signed = {
 
  const Signin: React.FC = () => {
 
- const { signin }: signed = useAuth();
+ const { signin }:signed = useAuth();
  const navigate = useNavigate();
 
  const [email, setEmail] = useState<string>("");
@@ -26,7 +26,8 @@ type signed = {
     return;
   }
 
-  const res = signin(email, password);
+  const res = signin (email, password);
+  
 
   if(res){
     setError(res);

@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from 'react';
 
 
 interface Props{
-  user?: string | null | boolean; 
+  user: string | null | boolean; 
   email?: string | null;
   password?: string;
   children : JSX.Element | JSX.Element[];
@@ -20,7 +20,8 @@ export const AuthProvider:React.FC<Props>= ({ children }) => {
 
     if (userToken && userStorage) {
       const hasUser = JSON.parse(userStorage)?.filter(
-        (user = user.email === JSON.parse(userToken).email)
+        ((user: { email: string; }) => user.email === JSON.parse(userToken).email)
+        
       );
 
       if (hasUser) setUser(hasUser[0]);
@@ -30,9 +31,11 @@ export const AuthProvider:React.FC<Props>= ({ children }) => {
   const signin = (email: string, password: string) => {
     const userStorage = JSON.parse(localStorage.getItem('users_db') || " ");
 
-    const hasUser = userStorage?.filter((user: { email: string; }) => user.email === email);
 
-    if (hasUser?.lenght) {
+    const hasUser = userStorage?.filter((user: { email: string; }) => user.email === email);
+    console.log(hasUser);
+
+    if (hasUser?.length){
       if (hasUser[0].email === email && hasUser[0].password === password) {
         const token = Math.random().toString(36).substring(2);
         localStorage.setItem('user_token', JSON.stringify({ email, token }));
@@ -52,10 +55,11 @@ export const AuthProvider:React.FC<Props>= ({ children }) => {
 
   const signup = (email: string, password: string) => {
     const userStorage = JSON.parse(localStorage.getItem('users_db') || " ");
+    
 
     const hasUser = userStorage?.filter((user: { email: string; }) => user.email === email);
 
-    if (hasUser?.lenght) {
+    if (hasUser?.length) {
       return 'An account with this email already exists';
     }
 

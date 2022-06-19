@@ -12,7 +12,7 @@ type signed = {
 
 const Signout: React.FC = () => {
 
-const { signup }: signed = useAuth();
+const { signup }:signed = useAuth();
 const navigate = useNavigate();
  
 const [email, setEmail] = useState<string>("");
@@ -33,6 +33,7 @@ const [error, setError] = useState<string>("");
    }
  
    const res = signup(email, password);
+   
  
    if(res){
      setError(res);
