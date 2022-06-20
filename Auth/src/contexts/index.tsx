@@ -12,7 +12,7 @@ interface Props{
 export const AuthContext = createContext({});
 
 export const AuthProvider:React.FC<Props>= ({ children }) => {
-  let [user, setUser] = useState<string | any>(null);
+  const [user, setUser] = useState<string | any>(null);
 
   useEffect(() => {
     const userToken = localStorage.getItem('user_token');
