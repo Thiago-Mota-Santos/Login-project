@@ -39,6 +39,7 @@ export const AuthProvider: React.FC<Props> = ({ children }) => {
         const token = Math.random().toString(36).substring(2);
         localStorage.setItem('user_token', JSON.stringify({ email, token }));
         setUser({ email, password });
+        console.log(token);
         return;
       } else {
         return 'Email or password incorrect';
