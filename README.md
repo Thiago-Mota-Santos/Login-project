@@ -2,10 +2,6 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Thiago-Mota-Santos/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/Thiago-Mota-Santos/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/Thiago-Mota-Santos/README-template?style=for-the-badge)
-
 
 ![ezgif-4-4da5053ed7](https://user-images.githubusercontent.com/75326612/174884855-8f871fe4-65d0-4f9d-82c7-c305555efb6f.gif)
 
