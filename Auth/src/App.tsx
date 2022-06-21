@@ -5,14 +5,12 @@ import { AuthProvider } from './contexts/index';
 function App() {
   return (
     <>
-    <AuthProvider>
-    <Routes/>
-    <GlobalStyles/>
-    </AuthProvider>
+      <AuthProvider>
+        <Routes />
+        <GlobalStyles />
+      </AuthProvider>
     </>
-  )
-     
-  
+  );
 }
 
-export default App
+export default App;
